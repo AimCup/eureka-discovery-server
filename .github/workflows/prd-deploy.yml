@@ -10,6 +10,6 @@ jobs:
       group: Default
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image
+    - name: Build and deploy the Docker image
       run: |
         docker-compose -f docker/prd/prd-deploy-job.yml up -d --build
