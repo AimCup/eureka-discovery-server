@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>xyz.aimcup</groupId>
 	<artifactId>eureka</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>eureka</name>
 	<description>eureka</description>
 	<properties>
@@ -49,5 +49,29 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<spring.profiles.active>dev</spring.profiles.active>
+			</properties>
+		</profile>
+		<profile>
+			<id>stg</id>
+			<properties>
+				<spring.profiles.active>stg</spring.profiles.active>
+			</properties>
+		</profile>
+		<profile>
+			<id>prd</id>
+			<properties>
+				<spring.profiles.active>prd</spring.profiles.active>
+			</properties>
+		</profile>
+	</profiles>
 
 </project>
